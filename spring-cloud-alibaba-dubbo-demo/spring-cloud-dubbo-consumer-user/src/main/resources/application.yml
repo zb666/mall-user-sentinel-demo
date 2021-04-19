@@ -1,0 +1,27 @@
+dubbo:
+  cloud:
+    # 指定需要订阅的服务提供方，默认值*，会订阅所有服务，不建议使用
+    subscribed-services: spring-cloud-dubbo-provider-user
+#  application:
+#    name: ${spring.application.name}
+  protocol:
+    # dubbo 协议
+    name: dubbo
+    # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+    port: -1
+#  registry:
+#    #挂载到 Spring Cloud 注册中心  高版本可选
+#    address: spring-cloud://127.0.0.1:8848
+
+spring:
+  application:
+    name: spring-cloud-dubbo-consumer-user
+  main:
+    # Spring Boot2.1及更高的版本需要设定
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      # Nacos 服务发现与注册配置
+      discovery:
+        server-addr: 127.0.0.1:8848
+

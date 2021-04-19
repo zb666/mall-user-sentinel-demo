@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>vip-spring-cloud-alibaba</artifactId>
+        <groupId>com.tuling.mall</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>spring-cloud-alibaba-dubbo-demo</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>spring-cloud-dubbo-api</module>
+        <module>spring-cloud-dubbo-provider-user</module>
+        <module>spring-cloud-dubbo-consumer-user</module>
+        <module>spring-cloud-dubbo-provider-user-feign</module>
+        <module>spring-cloud-dubbo-consumer-user-feign</module>
+        <module>spring-cloud-dubbo-consumer-user-feign-sentinel</module>
+        <module>spring-cloud-dubbo-provider-user-feign-sentinel</module>
+    </modules>
+
+
+</project>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tuling.mall</groupId>
+        <artifactId>vip-spring-cloud-alibaba</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <groupId>com.tuling.mall</groupId>
+    <artifactId>mall-user-feign-demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>mall-user-feign-demo</name>
+    <description>Demo project for Spring Boot</description>
+
+    <dependencies>
+    
+        <dependency>
+            <groupId>com.tuling.mall</groupId>
+            <artifactId>mall-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    
+        <!-- nacos服务注册与发现 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+    
+        <!-- openfeign 远程调用 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!-- Apache HttpClient -->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.httpcomponents</groupId>-->
+            <!--<artifactId>httpclient</artifactId>-->
+            <!--<version>4.5.7</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>io.github.openfeign</groupId>-->
+            <!--<artifactId>feign-httpclient</artifactId>-->
+            <!--<version>10.1.0</version>-->
+        <!--</dependency>-->
+
+        <!-- feign-okhttp -->
+        <!--<dependency>-->
+            <!--<groupId>io.github.openfeign</groupId>-->
+            <!--<artifactId>feign-okhttp</artifactId>-->
+        <!--</dependency>-->
+
+        
+        <!-- feign调用依赖 -->
+        <dependency>
+            <groupId>com.netflix.feign</groupId>
+            <artifactId>feign-core</artifactId>
+            <version>8.18.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.feign</groupId>
+            <artifactId>feign-jackson</artifactId>
+            <version>8.18.0</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

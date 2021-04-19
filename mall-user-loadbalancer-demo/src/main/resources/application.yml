@@ -1,0 +1,14 @@
+server:
+  port: 8060
+
+spring:
+  application:
+    name: mall-user-loadbalancer-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    # 不使用ribbon
+    loadbalancer:
+      ribbon:
+        enabled: false

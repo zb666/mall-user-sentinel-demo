@@ -1,0 +1,39 @@
+server:
+  port: 8050
+
+spring:
+  application:
+    name: mall-user-ribbon-demo  #微服务名称
+
+  #配置nacos注册中心地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        cluster-name: SH
+        metadata:
+          version: v2
+    # 不使用ribbon
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+
+# 被调用的微服务名  当需要使用局部配置的时候推荐使用这种方式
+#mall-order:
+#  ribbon:
+#    #指定使用Nacos提供的负载均衡策略（优先调用同一集群的实例，基于随机&权重）
+#    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+  # 自定义的负载均衡策略（基于随机&权重）
+    #NFLoadBalancerRuleClassName: com.tuling.mall.ribbondemo.rule.NacosRandomWithWeightRule
+
+ribbon:
+  eager-load:
+    # 开启ribbon饥饿加载
+    enabled: true
+    # 配置mall-user使用ribbon饥饿加载，多个使用逗号分隔
+    clients: mall-order
+
+
+
+
